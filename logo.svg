@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="44%" r="52%">
+      <stop offset="0%" stop-color="#c8963c" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0d0c0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c8963c" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#c8963c" stop-opacity="0.7"/>
+      <stop offset="70%" stop-color="#c8963c" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#c8963c" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="#0d0c0b"/>
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+
+  <!-- Outer thin border -->
+  <rect x="28" y="28" width="444" height="444" fill="none" stroke="#c8963c" stroke-width="0.6" opacity="0.18"/>
+
+  <!-- Corner bracket marks -->
+  <polyline points="28,72 28,28 72,28" fill="none" stroke="#c8963c" stroke-width="2" stroke-linecap="square"/>
+  <polyline points="428,28 472,28 472,72" fill="none" stroke="#c8963c" stroke-width="2" stroke-linecap="square"/>
+  <polyline points="28,428 28,472 72,472" fill="none" stroke="#c8963c" stroke-width="2" stroke-linecap="square"/>
+  <polyline points="472,428 472,472 428,472" fill="none" stroke="#c8963c" stroke-width="2" stroke-linecap="square"/>
+
+  <!-- Ascending candlestick chart — top-right -->
+  <!-- bar 1 -->
+  <line x1="362" y1="124" x2="362" y2="132" stroke="#c8963c" stroke-width="1.4" opacity="0.45"/>
+  <rect x="357" y="132" width="10" height="24" fill="#c8963c" opacity="0.45" rx="1"/>
+  <line x1="362" y1="156" x2="362" y2="164" stroke="#c8963c" stroke-width="1.4" opacity="0.45"/>
+  <!-- bar 2 -->
+  <line x1="380" y1="116" x2="380" y2="124" stroke="#c8963c" stroke-width="1.4" opacity="0.62"/>
+  <rect x="375" y="124" width="10" height="32" fill="#c8963c" opacity="0.62" rx="1"/>
+  <line x1="380" y1="156" x2="380" y2="164" stroke="#c8963c" stroke-width="1.4" opacity="0.62"/>
+  <!-- bar 3 -->
+  <line x1="398" y1="106" x2="398" y2="115" stroke="#c8963c" stroke-width="1.4" opacity="0.8"/>
+  <rect x="393" y="115" width="10" height="44" fill="#c8963c" opacity="0.8" rx="1"/>
+  <line x1="398" y1="159" x2="398" y2="167" stroke="#c8963c" stroke-width="1.4" opacity="0.8"/>
+  <!-- bar 4 — tallest, glowing -->
+  <line x1="416" y1="94" x2="416" y2="104" stroke="#c8963c" stroke-width="1.4" filter="url(#glow)"/>
+  <rect x="411" y="104" width="10" height="58" fill="#c8963c" rx="1" filter="url(#glow)"/>
+  <line x1="416" y1="162" x2="416" y2="172" stroke="#c8963c" stroke-width="1.4" filter="url(#glow)"/>
+
+  <!-- Main VJ -->
+  <text
+    x="252" y="305"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="240"
+    font-weight="bold"
+    font-style="italic"
+    fill="#f7f4ef"
+    text-anchor="middle"
+    letter-spacing="-8">VJ</text>
+
+  <!-- Gold shimmer at V base — triangle highlight -->
+  <polygon points="126,305 188,305 157,270" fill="#c8963c" opacity="0.12"/>
+
+  <!-- Separator -->
+  <line x1="100" y1="336" x2="400" y2="336" stroke="url(#goldLine)" stroke-width="1"/>
+
+  <!-- ROD -->
+  <text
+    x="252" y="388"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="30"
+    font-weight="700"
+    fill="#c8963c"
+    text-anchor="middle"
+    letter-spacing="22"
+    filter="url(#softglow)">ROD</text>
+
+  <!-- Victor Rodriguez byline -->
+  <text
+    x="252" y="432"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="9.5"
+    font-weight="400"
+    fill="#c8963c"
+    text-anchor="middle"
+    letter-spacing="5"
+    opacity="0.38">VICTOR RODRIGUEZ · LOS ANGELES</text>
+</svg>
